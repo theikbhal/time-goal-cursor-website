@@ -150,13 +150,64 @@
             font-size: 0.875rem;
         }
 
+        .top-nav {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            z-index: 100;
+        }
+
+        .status-badge {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 99px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            backdrop-filter: blur(8px);
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-badge:hover {
+            background: rgba(56, 189, 248, 0.2);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .status-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--primary);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
             .preview { padding: 20px; }
+            .top-nav { top: 16px; right: 16px; }
         }
     </style>
 </head>
 <body>
+
+    <nav class="top-nav">
+        <a href="status.html" class="status-badge">
+            <span class="dot"></span> Project Status
+        </a>
+    </nav>
 
     <div class="container">
         <header>

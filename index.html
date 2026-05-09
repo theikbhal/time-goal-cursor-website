@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor Time Tracker | Stay Focused, Stay Aware</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #020617;
+            --card-bg: rgba(30, 41, 59, 0.5);
+            --primary: #38bdf8;
+            --thanks: #4ade80;
+            --sorry: #f87171;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Hero Section */
+        header {
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            margin-bottom: 24px;
+            background: linear-gradient(to right, #fff, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--bg);
+            padding: 16px 32px;
+            border-radius: 99px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.6);
+        }
+
+        /* Feature Preview (Mockup) */
+        .preview {
+            margin-top: 60px;
+            padding: 40px;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            text-align: center;
+            position: relative;
+        }
+
+        .cursor-mock {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(15, 23, 42, 0.9);
+            padding: 8px 16px;
+            border-radius: 99px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .m-goal { color: var(--primary); font-weight: 800; }
+        .m-thanks { color: var(--thanks); }
+        .m-sorry { color: var(--sorry); }
+        .m-time { color: #fff; }
+
+        /* Features Grid */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin: 80px 0;
+        }
+
+        .feature-card {
+            padding: 32px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 12px;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+        }
+
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .preview { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Cursor Time Tracker</h1>
+            <p class="subtitle">Stay aware of your time, goals, and habits—without ever taking your eyes off the focus area.</p>
+            <a href="#" class="cta-button">Add to Chrome — It's Free</a>
+        </header>
+
+        <div class="preview">
+            <div class="cursor-mock">
+                <span>🌙</span>
+                <span class="m-goal">NAMAZ</span>
+                <span style="color: #475569">|</span>
+                <span class="m-thanks">T:12</span>
+                <span class="m-sorry">S:44</span>
+                <span style="color: #475569">|</span>
+                <span class="m-time">9:20 AM</span>
+            </div>
+            <p style="margin-top: 30px; color: var(--text-muted); font-size: 0.9rem;">The elegant UI that follows your cursor everywhere.</p>
+        </div>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>Time Awareness</h3>
+                <p>Never lose track of the hour. A subtle digital clock follows your cursor, keeping you grounded during deep focus sessions.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Focus Goals</h3>
+                <p>Set a short 5-letter goal (like FOCUS or NAMAZ) that stays in your peripheral vision, gently reminding you of your current priority.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Habit Counters</h3>
+                <p>Track positive (Thanks) and negative (Sorry) interactions in real-time with instant keyboard shortcuts (T and S) or mouse clicks.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Premium Design</h3>
+                <p>Beautifully crafted glassmorphic UI that is non-intrusive. Clicks pass right through it, so it never gets in your way.</p>
+            </div>
+        </section>
+
+        <section style="text-align: center; margin: 80px 0; padding: 40px; background: rgba(255,255,255,0.02); border-radius: 24px;">
+            <h3 style="margin-bottom: 20px; font-size: 1.5rem; color: var(--primary);">Need Support?</h3>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">Have questions or feedback? We're here to help.</p>
+            <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
+                <a href="mailto:theikbhal@gmail.com" style="color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                    <span>📧</span> theikbhal@gmail.com
+                </a>
+                <a href="https://wa.me/919901014560" target="_blank" style="color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                    <span>💬</span> WhatsApp: +91 9901014560
+                </a>
+            </div>
+        </section>
+
+        <section id="privacy" style="text-align: center; margin: 40px 0; padding: 40px; border-top: 1px solid rgba(255,255,255,0.05);">
+            <h3 style="margin-bottom: 20px; font-size: 1.2rem; color: var(--primary);">Privacy Policy</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 600px; margin: 0 auto;">
+                Cursor Time Tracker values your privacy. We do not collect, store, or transmit any personal data. All settings and counter values are stored locally on your device via <code>chrome.storage</code> and are never shared with third parties.
+            </p>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Cursor Time Tracker. Built for high-performance focus.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Status | Cursor Time Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #020617;
+            --card: rgba(30, 41, 59, 0.5);
+            --primary: #38bdf8;
+            --accent: #a855f7;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 20px;
+        }
+        h1 { font-size: 2rem; font-weight: 800; margin: 0; background: linear-gradient(to right, #fff, var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .badge { background: rgba(56, 189, 248, 0.2); color: var(--primary); padding: 4px 12px; border-radius: 99px; font-size: 0.8rem; font-weight: 600; border: 1px solid rgba(56, 189, 248, 0.3); }
+        
+        .section { background: var(--card); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 32px; margin-bottom: 24px; }
+        .section h2 { margin-top: 0; font-size: 1.25rem; color: var(--primary); margin-bottom: 20px; }
+        
+        .status-link { color: var(--text); text-decoration: none; font-size: 0.9rem; word-break: break-all; opacity: 0.8; transition: opacity 0.2s; }
+        .status-link:hover { opacity: 1; color: var(--primary); }
+
+        .pipeline-list { list-style: none; padding: 0; }
+        .pipeline-item { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .pipeline-item:last-child { border-bottom: none; }
+        .dot { width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); }
+        .dot.done { background-color: #10b981; box-shadow: 0 0 10px #10b981; }
+        .dot.pending { background-color: #64748b; }
+
+        .stats { display: flex; gap: 24px; margin-top: 40px; font-size: 0.85rem; color: var(--text-muted); }
+        .stat-item strong { color: var(--text); }
+        
+        .back-link { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 20px; display: inline-block; }
+        .back-link:hover { color: var(--primary); }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Site</a>
+    
+    <div class="header">
+        <h1>Project Dashboard</h1>
+        <div class="badge">In Review</div>
+    </div>
+
+    <div class="section">
+        <h2>Chrome Web Store Status</h2>
+        <p style="margin-bottom: 12px; font-size: 0.9rem; color: var(--text-muted);">Extension submitted for approval. Track here:</p>
+        <a href="https://chrome.google.com/webstore/devconsole/1dd68b0e-9d99-4b18-9b97-7487f3c54580" class="status-link" target="_blank">
+            🔗 Web Store Developer Console
+        </a>
+    </div>
+
+    <div class="section">
+        <h2>Development Pipeline</h2>
+        <ul class="pipeline-list">
+            <li class="pipeline-item">
+                <div class="dot done"></div>
+                <div><strong>MVP Launch</strong> - Initial extension with goal, time, and counters.</div>
+            </li>
+            <li class="pipeline-item">
+                <div class="dot pending"></div>
+                <div><strong>Improve Icons</strong> - Premium 3D assets and store branding.</div>
+            </li>
+            <li class="pipeline-item">
+                <div class="dot pending"></div>
+                <div><strong>Advanced Features</strong> - Personalized Namaz countdowns and more shortcuts.</div>
+            </li>
+            <li class="pipeline-item">
+                <div class="dot pending"></div>
+                <div><strong>Promotion</strong> - Launch on Product Hunt and Social Media.</div>
+            </li>
+            <li class="pipeline-item">
+                <div class="dot pending"></div>
+                <div><strong>Self Use & Refinement</strong> - Daily feedback from real-world usage.</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="stats">
+        <div class="stat-item">Development Time: <strong>2 Hours</strong></div>
+        <div class="stat-item">Powered by: <strong>Antigravity + Claude Code</strong></div>
+    </div>
+
+    <footer style="margin-top: 80px; text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+        &copy; 2026 Cursor Time Tracker Status Board
+    </footer>
+</body>
+</html>
